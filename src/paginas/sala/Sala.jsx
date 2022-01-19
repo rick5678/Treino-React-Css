@@ -4,6 +4,14 @@ import './index.css';
 const Sala = () => {
     return (
         <>
+            <div className="raio">
+                <div className="parte-um"></div>
+                <div className="parte-dois"></div>
+                <div className="parte-tres">
+                    <div className="canto-direito"></div>
+                    <div className="canto-esquerdo"></div>
+                </div>
+            </div>
             <div className="sala">
                 <div>
                     <span className="sala-front"></span>
@@ -34,9 +42,7 @@ const Sala = () => {
                 <div className="linha-texto-a">
                     <p> Oi galera não sei o que por aqui</p>
                 </div>
-                <div className="linha-texto-b">
-                    <p> Oi galera não sei o que por aqui</p>
-                </div>
+
             </div>
         </>
     )

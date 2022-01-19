@@ -2,6 +2,66 @@
     background-color: rgb(255, 255, 255);
   }
   
+.raio{
+  position: absolute;
+  top: 900px;  
+  width: 80%;
+  height: 500px;
+  right: -100px;
+  margin: 0% 10%;
+  transform: rotateZ(-25deg);
+}
+
+.parte-um{
+  position: absolute;
+  background-color: yellow;
+  right: 200px;
+  width: 150px;
+  height: 450px;
+  transform-style: preserve-3d;
+  transform: rotatez(55deg);
+}
+
+.parte-dois{
+  position: absolute;
+  background-color: yellow;
+  right: 385px;
+  top: 110px;
+  width: 150px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: rotatez(-35deg);
+}
+
+.parte-tres{
+  position: absolute;
+  background-color: yellow;
+  right: 620px;
+  top: 30px;
+  width: 150px;
+  height: 600px;
+  transform-style: preserve-3d;
+  transform: rotatez(55deg);
+}
+.canto-direito{
+  position: absolute;
+  right: -50px;
+  bottom: -30px;
+  width: 100px;
+  height: 400px;
+  background-color: rgb(255, 255, 255);
+  transform:rotateZ(15deg)
+}
+.canto-esquerdo{
+  position: absolute;
+  right: 100px;
+  bottom: -30px;
+  width: 100px;
+  height: 800px;
+  background-color: rgb(255, 255, 255);
+  transform:rotateZ(-5deg)
+}
+
   .sala{
     position: relative;
     width: 100%;
@@ -101,7 +161,7 @@
     width: 150px;
     height: 150px;
     transform-style: preserve-3d;
-    animation: animate 5s linear infinite;
+    animation: animate 15s linear infinite;
   }
   
   .cubo div span{
@@ -147,28 +207,151 @@
     top: 700px;
     right: 100px;
     width: 40%;
-    height: 900px;
-    background-color: black;
+    height: 700px;
   }
 
-  .linha-texto, .linha-texto-a, .linha-texto-b{
-    width: 90%;
+  .linha-texto, .linha-texto-a{
+    width: 80%;
     height: 200px;
     background-color: white;
-    border: black 10px solid;
+    border: rgb(0, 0, 0) 10px dashed;
     font-weight: bold;
     font-size: 18px;
     padding: 1%;
     margin: 10% 5%;
   }
   
-  .linha-texto, .linha-texto-b{
+  .linha-texto{
     border-left: none;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    margin-left: 0%;
   }  
   .linha-texto-a{
     border-right: none;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    margin-right: 5%;
   } 
+
+  @media only screen and (max-device-width: 1430px) {
+    .sala{
+      height: 700px;
+    }
+
+     .sala-front, .sala-baixo, .sala-right{
+      width: 25%;
+      height: 45%;
+    }
+  
+    .sala-back{
+      width: 23%;
+      height: 45%;
+      transform: translatey(70px) rotateY(-30deg) translateX(-8%);
+    }
+  
+    .sala-front{
+      transform: translatey(100px) translatex(-75%) rotateY(60deg);
+    }
+    
+    .sala-baixo{
+      transform: translatey(300px) translatex(-35%) rotateY(60deg) rotateX(90deg) ;
+    }
+    .sala-right{
+      transform: translatez(330px) translatex(4%) rotateY(60deg);
+    }
+  
+    .container-pilar{
+      position: absolute;
+      top: 950px;
+      left: 350px;
+      height: auto;
+    }
+
+    .topo-pilar{
+      margin-left: -18px;
+      margin-bottom: -15px;
+      width: 80px;
+      height: 20px;
+    }
+  
+    .pilar{
+      width: 45px;
+      height: 100px;
+    }
+    .pilar-sombreado{
+      margin: 40%;
+      width: 15px;
+      height: 100px;
+      background-color: rgb(255, 221, 170);
+    }
+    
+    .bottom-pilar{
+      margin-left: -18px;
+      width: 80px;
+      height: 20px;
+    }
+
+    .cubo{
+      top: 810px;
+      left: 320px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .cubo div {
+      width: 100px;
+      height: 100px;
+    }
+       
+    .cubo div span{
+      width: 100px;
+      height: 100px;
+    }
+
+    .cubo-a{
+      transform: rotateY(0deg) translateZ(50px);
+    }
+    
+    .cubo-b{
+      transform: rotateY(90deg) translateZ(50px);
+    }
+    
+    .cubo-c{
+      transform: rotateY(180deg) translateZ(50px);
+    }
+    
+    .cubo-d{
+      transform: rotateY(270deg) translateZ(50px);
+    }
+
+    .menu-textos{
+      top: 650px;
+      right: 100px;
+      width: 40%;
+      height: 900px;
+      background-color: rgb(255, 255, 255);
+    }
+  
+    .linha-texto, .linha-texto-a, .linha-texto-b{
+      height: 150px;
+      background-color: white;
+      border: rgb(0, 0, 0) 3px solid;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 2%;
+      margin: 10% 5%;
+    }
+    
+    .linha-texto, .linha-texto-b{
+      border-left: none;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }  
+    .linha-texto-a{
+      border-right: none;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    } 
+
+}
