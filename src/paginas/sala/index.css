@@ -1,0 +1,174 @@
+  body{
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .sala{
+    position: relative;
+    width: 100%;
+    height: 900px;
+    transform-style: preserve-3d;   
+    transform: rotateX(-30deg);
+  }
+  
+  .sala div {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  
+  .sala div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#232324;
+    border: solid 10px ;
+    border-image: linear-gradient(to left, #00000060, #23232430) 1;
+  }
+    
+   .sala-front, .sala-baixo, .sala-right{
+    width: 30%;
+    height: 58%;
+  }
+
+  .sala-back{
+    width: 27.5%;
+    height: 58%;
+    transform: translatey(100px) rotateY(-30deg) translateX(-8%);
+  }
+
+  #direita{
+    background-color: black;
+  }
+
+  .sala-front{
+    transform: translatey(150px) translatex(-75%) rotateY(60deg);
+  }
+  
+  .sala-baixo{
+    transform: translatey(485px) translatex(-36%) rotateY(60deg) rotateX(90deg) ;
+  }
+  .sala-right{
+    transform: translatez(525px) translatex(4%) rotateY(60deg);
+  }
+
+  .container-pilar{
+    position: absolute;
+    top: 1100px;
+    left: 500px;
+    height: auto;
+  }
+
+  .topo-pilar{
+    margin-left: -23px;
+    margin-bottom: -30px;
+    width: 140px;
+    height: 20px;
+    background-color: blanchedalmond;
+  }
+
+  .pilar{
+    width: 90px;
+    height: 200px;
+    background-color: blanchedalmond;
+  }
+  .pilar-sombreado{
+    margin: 40%;
+    width: 30px;
+    height: 200px;
+    background-color: rgb(255, 221, 170);
+  }
+  
+  .bottom-pilar{
+    margin-left: -23px;
+    width: 140px;
+    height: 20px;
+    background-color: blanchedalmond;
+  }
+
+  .cubo{
+    position: absolute;
+    top: 900px;
+    left: 470px;
+    transform-style: preserve-3d;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .cubo div {
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: animate 5s linear infinite;
+  }
+  
+  .cubo div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: #151515;
+    border: #000 solid 2px;
+  }
+  
+  .cubo-a{
+    transform: rotateY(0deg) translateZ(75px);
+  }
+  
+  .cubo-b{
+    transform: rotateY(90deg) translateZ(75px);
+  }
+  
+  .cubo-c{
+    transform: rotateY(180deg) translateZ(75px);
+  }
+  
+  .cubo-d{
+    transform: rotateY(270deg) translateZ(75px);
+  }
+  
+  @keyframes animate {
+    0%
+    {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    
+    100%
+    {
+        transform: rotateX(0deg) rotateY(360deg);
+    } 
+  }
+
+  .menu-textos{
+    position: absolute;
+    top: 700px;
+    right: 100px;
+    width: 40%;
+    height: 900px;
+    background-color: black;
+  }
+
+  .linha-texto, .linha-texto-a, .linha-texto-b{
+    width: 90%;
+    height: 200px;
+    background-color: white;
+    border: black 10px solid;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 1%;
+    margin: 10% 5%;
+  }
+  
+  .linha-texto, .linha-texto-b{
+    border-left: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }  
+  .linha-texto-a{
+    border-right: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  } 
