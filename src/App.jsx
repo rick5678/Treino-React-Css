@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import Cabecalho from './components/cabecalho/Cabecalho.jsx';
+import Carrossel from './paginas/carrossel/Carrossel';
 import Home from './paginas/home/Home';
 import Sala from './paginas/sala/Sala';
 
 function App() {
   return (
     <>
-      <Cabecalho />
       <Home />
       <Sala />
+      <Carrossel />
     </>
   );
 }

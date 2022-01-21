@@ -29,11 +29,32 @@ const Sala = () => {
                 </div>
             </div>
             <div className="container-pilar">
-                <section className="topo-pilar"></section>
-                <section className="pilar">
-                    <section className="pilar-sombreado"></section>
-                </section>
-                <section className="bottom-pilar"></section>
+                <div>
+                    <div className="topo-pilar">
+                        <div>
+                            <span className="topo-pilar-a"></span>
+                            <span className="topo-pilar-b"></span>
+                            <span className="topo-pilar-c"></span>
+                            <span className="topo-pilar-d"></span>
+                        </div>
+                    </div>
+                    <div className="pilar">
+                        <div>
+                            <span className="pilar-a"></span>
+                            <span className="pilar-b"></span>
+                            <span className="pilar-c"></span>
+                            <span className="pilar-d"></span>
+                        </div>
+                    </div>
+                    <div className="bottom-pilar">
+                        <div>
+                            <span className="bottom-pilar-a"></span>
+                            <span className="bottom-pilar-b"></span>
+                            <span className="bottom-pilar-c"></span>
+                            <span className="bottom-pilar-d"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className="menu-textos">
                 <div className="linha-texto">
