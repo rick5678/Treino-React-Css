@@ -1,15 +1,11 @@
 import React from 'react';
 import './App.css';
-import Carrossel from './paginas/carrossel/Carrossel';
-import Home from './paginas/home/Home';
-import Sala from './paginas/sala/Sala';
+import Root from './paginas/Root';
 
 function App() {
   return (
     <>
-      <Home />
-      <Sala />
-      <Carrossel />
+      <Root/>
     </>
   );
 }

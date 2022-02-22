@@ -1,29 +1,59 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { useHistory } from 'react-router-dom';
 import './index.css';
+import StoreContext from "../../components/Store/Context";
+
+function initialState() {
+    return { user: '', password: '' };
+}
+
+function login({ user, password }) {
+    if (user === 'admin' && password === 'admin') {
+        return { token: '1234' };
+    }
+    return { error: 'Usuário ou senha inválido' };
+}
 
 const Home = () => {
+    const [values, setValues] = useState(initialState);
+    const { setToken } = useContext(StoreContext);
+    const history = useHistory();
+
+    function onChange(e) {
+        const { value, name } = e.target
+        setValues({
+            ...values,
+            [name]: value
+        })
+    }
+
+    function onSubmit(e) {
+        e.preventDefault();
+
+        const { token } = login(values);
+        if (token) {
+            setToken(token);
+            return history.push('/bilheteria')
+
+        }
+        setValues(initialState);
+    }
 
     return (
-        <main className="container-principal">
-            <div className="parte-escura"></div>
-            <h2 id="titulo">Two dors</h2>
-            <h1 id="titulo-maior">Cinema Club</h1>
-            <div className="cortinas-esq" id="cortinas-esq"></div>
-            <div className="cortinas-dir" id="cortinas-dir"></div>            
-            <div className="tela-cinema" id="cinema">
-                <div className="inputs">
-                    <div className="container-input">
-                        <i className="bi bi-person-circle icon"></i>
-                        <input type="text" id="usuario"></input>
-                    </div>
-                    <div className="container-input">
-                        <i className="bi bi-unlock-fill icon"></i>
-                        <input type="text" id="senha"></input>
-                    </div>
+        <>
+            <form className="inputs" onSubmit={onSubmit}>
+                <div className="container-input">
+                    <i className="bi bi-person-circle icon" id="icon-usuario"></i>
+                    <input type="text" id="user" name="user" onChange={onChange} value={values.user}></input>
                 </div>
+                <div className="container-input">
+                    <i className="bi bi-unlock-fill icon" id="icon-senha"></i>
+                    <input type="password" id="password" name="password" onChange={onChange} value={values.password}></input>
+                </div>
+
                 <div className="botoes">
                     <div>
-                        <button className="botao-cinema-play">
+                        <button type="submit" className="botao-cinema-play" id="conect">
                             <i className="bi bi-play-circle-fill icon-btn"></i>
                             Conectar
                         </button>
@@ -35,10 +65,8 @@ const Home = () => {
                         </button>
                     </div>
                 </div>
-            </div>
-            <div className="luz-escura"></div>
-            <div className="cadeiras" ></div>
-        </main>
+            </form>
+        </>
     )
 }
 
