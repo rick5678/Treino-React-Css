@@ -4,10 +4,10 @@ export default {
     getHomeList: async () => {
         return [
             {   
-                id: 1,
+                id: '1',
                 img: 'https://upload.wikimedia.org/wikipedia/pt/3/37/Spider-Man_3.jpg',
                 title: 'Homem Aranha 3',
-                Secoes: [
+                sessoes: [
                     ['seg', '12h40'],
                     ['seg', '14h10'],
                     ['seg', '14h50'],
@@ -22,10 +22,10 @@ export default {
             },
 
             {
-                id: 2,
+                id: '2',
                 img: 'https://media.fstatic.com/rsltsvmKeTixb0eg1NM8qnR0t4U=/290x478/smart/media/movies/covers/2017/12/1200x630bb_1_8q5Qnm5.jpg',
                 title: 'Alice no país das maravilhas',
-                Secoes: [
+                sessoes: [
                     ['seg', '12h40'],
                     ['seg', '14h10'],
                     ['seg', '14h50'],

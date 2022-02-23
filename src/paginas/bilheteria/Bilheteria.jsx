@@ -2,7 +2,7 @@ import Filmes from 'paginas/filmes/Filmes';
 import React from 'react';
 import './index.css';
 
-const PagesLogin = () => (
+const PagesLogin = (list) => (
     <main className="container-cinema">
         <div className='cineminha'>
             <Filmes/>

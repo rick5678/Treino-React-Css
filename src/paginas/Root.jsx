@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,17 +9,31 @@ import StoreProvider from '../components/Store/Provider';
 import RoutesPrivate from '../components/Routes/Private/Private'
 import Login from './Login/Login'
 import Bilheteria from './bilheteria/Bilheteria.jsx';
+import Tmdb from 'Tmdb';
+import Horarios from './horarios/Horarios';
 
-const PagesRoot = () => (
-  <Router>
-    <StoreProvider>
-      <Switch>
-        <Route path="/login" component={Login} />
-        <RoutesPrivate path="/bilheteria" component={Bilheteria} />
-      </Switch>
-    </StoreProvider>
-  </Router>
-)
+export default () => {
+  const [movieList, setMovieList] = useState([]);
 
+    useEffect(() => {
+        const Filmes = async () => {
 
-export default PagesRoot;
+            let list = await Tmdb.getHomeList();
+            setMovieList(list);
+        }
+        Filmes();
+    }, []);
+
+  return(
+    <Router>
+      <StoreProvider>
+        <Switch>
+          <Route path="/login" component={Login} />
+          <RoutesPrivate path="/bilheteria" component={Bilheteria}/>
+          <RoutesPrivate path={movieList.item} component={Horarios} />
+        </Switch>
+      </StoreProvider>
+    </Router>
+  )
+}
+

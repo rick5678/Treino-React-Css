@@ -1,0 +1,53 @@
+.container-horarios{
+    position: absolute;
+    width: 90%;
+    height: 800px;
+    margin: 5%;
+    color: #fff;
+    display: flex;
+}
+
+.poster-horarios{
+    width: 400px;
+    height: 500px;
+    margin: 2%;
+    display: flexbox;
+}
+
+.poster-horarios h3{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.horarios{
+    display: inline;
+    width: 60%;
+    margin: 5%;
+}
+
+.table-horarios{
+    width: 100%;
+    margin: 1%;
+}
+
+th, td{
+    width: 30%;
+    padding: 2% 20%;
+    height: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.btnHorario{
+    font-weight: bold;
+    background-color: rgb(84, 233, 103);
+    border-style: none;
+    border-radius: 4px;
+    height: 40px;
+    width: 70px;
+}
+
+.btnHorario:hover{
+    transform: scale(110%);
+}

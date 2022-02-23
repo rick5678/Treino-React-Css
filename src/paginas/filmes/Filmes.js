@@ -18,7 +18,7 @@ export default () => {
             <div className='conteiner-cartazes hidden'>
                 <h3 className='filmes-disp'>Filmes disponiveis</h3>
                 {movieList.map((item, key) => (
-                    <Cartazes key={key} title={item.title} img={item.img} secoes={item.secoes} />
+                    <Cartazes key={key} id={item.id} img={item.img} />
                 ))}
             </div>
         )
