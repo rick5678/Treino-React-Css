@@ -21,13 +21,20 @@
 }
 
 .horarios{
-    display: inline;
     width: 60%;
     margin: 5%;
 }
 
 .table-horarios{
-    width: 100%;
+    position: relative;
+    left: 250px;
+    margin: 1%;
+}
+
+.table-horarios-dir{
+    position: relative;
+    bottom: 145px;
+    left: 400px;
     margin: 1%;
 }
 

@@ -1,11 +1,12 @@
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import './index.css';
 
-const Cartazes = ({ id, img }) => {
+const Cartazes = ({ id, img, secoes, titulo }) => {
     const history = useHistory();
 
     function onClique(e) {
-        return history.push(`${id}`);
+        {console.log(id, img, secoes, titulo)}
+        return  history.push(`${id}`) ;
     }
 
     return (

@@ -30,7 +30,7 @@ export default () => {
         <Switch>
           <Route path="/login" component={Login} />
           <RoutesPrivate path="/bilheteria" component={Bilheteria}/>
-          <RoutesPrivate path={movieList.item} component={Horarios} />
+          <RoutesPrivate path="/:id" component={Horarios} />
         </Switch>
       </StoreProvider>
     </Router>
